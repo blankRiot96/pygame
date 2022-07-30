@@ -1679,7 +1679,12 @@ _color_set_length(pgColorObject *color, PyObject *args)
 {
     int clength;
 
-    if (PyErr_WarnEx(PyExc_DeprecationWarning, "You can selectively unpack the rgba values you want, without having to set length.\nExample: r, g, b, _ = pygame.Color(200, 100, 42)\nSo, set_length() will be deprecated in pygame 2.1.3", 1) == -1) {
+    if (PyErr_WarnEx(
+            PyExc_DeprecationWarning,
+            "You can selectively unpack the rgba values you want, without "
+            "having to set length.\nExample: r, g, b, _ = pygame.Color(200, "
+            "100, 42)\nSo, set_length() will be deprecated in pygame 2.1.3",
+            1) == -1) {
         return NULL;
     }
 
